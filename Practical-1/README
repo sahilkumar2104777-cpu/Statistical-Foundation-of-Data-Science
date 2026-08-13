@@ -1,1 +1,249 @@
+# Practical 1: Data Frames, NumPy Operations & One-Hot Encoding
+
+**Name:** Sahil
+**Subject:** Data Science
+
+---
+
+## Aim / Objective
+
+1. Take raw data and convert it into a DataFrame.
+2. Using NumPy, find out the **shape**, **size**, and **dimension** of the data.
+3. Perform matrix operations: **addition, subtraction, multiplication, inverse, transpose, dot product**.
+4. (Optional) Take categorical data and convert it to numerical data — understand the **one-hot encoding** process.
+
+---
+
+## Step 1: Import Libraries
+
+We start by importing `pandas` (for handling tabular data) and `numpy` (for numerical/matrix operations).
+
+```python
+import pandas as pd
+import numpy as np
+```
+
+---
+
+## Step 2: Create Raw Data and Convert to a DataFrame
+
+A dictionary is created with student details — Name, Age, Maths marks, and Department. This raw data (a Python dictionary) is then converted into a **pandas DataFrame**, which organizes it into a structured, table-like format.
+
+```python
+file = {
+    "Name": ["Sahil", "Rahul", "Aman", "priya", "Naha"],
+    "Age": [20, 21, 19, 20, 22],
+    "Maths": [85, 78, 92, 88, 75],
+    "Department": ["Data Science", "Computer Science", "Data Science", "Computer Science", "Data Science"]
+}
+
+student_makes = pd.DataFrame(file)
+print(student_makes)
+```
+
+**Output:**
+
+```
+    Name  Age  Maths        Department
+0  Sahil   20     85      Data Science
+1  Rahul   21     78  Computer Science
+2   Aman   19     92      Data Science
+3  priya   20     88  Computer Science
+4   Naha   22     75      Data Science
+```
+
+**Explanation:** A dictionary's keys become column names, and its values (lists) become the column data. `pd.DataFrame()` converts this raw structure into a proper 2D table, which is far easier to analyze than a plain dictionary.
+
+---
+
+## Step 3: Explore the DataFrame
+
+Basic exploratory checks — first few rows, data types of each column, and the overall shape of the DataFrame.
+
+```python
+print("First 5 rows :\n", student_makes.head())
+print("Data type :\n", student_makes.dtypes)
+print("\nshape :", student_makes.shape)
+```
+
+**Output:**
+
+```
+First 5 rows :
+     Name  Age  Maths        Department
+0  Sahil   20     85      Data Science
+1  Rahul   21     78  Computer Science
+2   Aman   19     92      Data Science
+3  priya   20     88  Computer Science
+4   Naha   22     75      Data Science
+
+Data type :
+ Name            str
+Age           int64
+Maths         int64
+Department      str
+dtype: object
+
+shape : (5, 4)
+```
+
+**Explanation:** `.head()` previews the first 5 rows, `.dtypes` shows the data type of each column (useful to confirm numeric vs. text columns), and `.shape` gives `(rows, columns)` — here, 5 students and 4 attributes.
+
+---
+
+## Step 4: Convert DataFrame Columns into a NumPy Array
+
+To perform mathematical/matrix operations, the numeric columns (`Age`, `Maths`) are extracted from the DataFrame and converted into a NumPy array using `.values`.
+
+```python
+numeric_data = student_makes[['Age', 'Maths']].values
+print(numeric_data)
+```
+
+**Output:**
+
+```
+[[20 85]
+ [21 78]
+ [19 92]
+ [20 88]
+ [22 75]]
+```
+
+---
+
+## Step 5: Find Shape, Size, and Dimension (NumPy)
+
+```python
+print("shape : ", numeric_data.shape)
+print("size : ", numeric_data.size)
+print("dimension : ", numeric_data.ndim)
+```
+
+**Output:**
+
+```
+shape :  (5, 2)
+size :  10
+dimension :  2
+```
+
+**Explanation:**
+| Property | Meaning | Value |
+|---|---|---|
+| `shape` | (rows, columns) of the array | (5, 2) |
+| `size` | Total number of elements (rows × columns) | 10 |
+| `ndim` | Number of dimensions/axes | 2 (a 2D matrix) |
+
+---
+
+## Step 6: Create Matrices for Operations
+
+Two 2×2 matrices, `A` and `B`, are defined to demonstrate matrix operations.
+
+```python
+A = np.array([[1, 2],
+              [3, 4]])
+B = np.array([[1, 12],
+              [8, 4]])
+print("Matrix A:\n", A, "\nMatrix B:\n", B)
+```
+
+**Output:**
+
+```
+Matrix A:
+ [[1 2]
+ [3 4]] 
+Matrix B:
+ [[ 1 12]
+ [ 8  4]]
+```
+
+---
+
+## Step 7: Matrix Operations
+
+```python
+print("Addition:\n", A + B)
+print("substraction :\n", A - B)
+print("Multiplication :\n", A * B)
+print("Dot product :\n", np.dot(A, B))
+print('Transpose of A :\n', A.T)
+print("Inverse of A :\n", np.linalg.inv(A))
+print('Determinant of A: \n  ', np.linalg.det(A))
+```
+
+**Output:**
+
+```
+Addition:
+ [[ 2 14]
+ [11  8]]
+substraction :
+ [[  0 -10]
+ [ -5   0]]
+Multiplication :
+ [[ 1 24]
+ [24 16]]
+Dot product :
+ [[17 20]
+ [35 52]]
+Transpose of A :
+ [[1 3]
+ [2 4]]
+Inverse of A :
+ [[-2.   1. ]
+ [ 1.5 -0.5]]
+Determinant of A: 
+  -2.0000000000000004
+```
+
+**Explanation of each operation:**
+
+- **Addition (`A + B`):** Adds corresponding elements of the two matrices.
+- **Subtraction (`A - B`):** Subtracts corresponding elements.
+- **Element-wise Multiplication (`A * B`):** Multiplies elements at the same position (**not** true matrix multiplication).
+- **Dot Product (`np.dot(A, B)`):** True matrix multiplication — rows of `A` multiplied with columns of `B` and summed. This is the standard mathematical matrix product.
+- **Transpose (`A.T`):** Flips the matrix over its diagonal — rows become columns and vice versa.
+- **Inverse (`np.linalg.inv(A)`):** The matrix `A⁻¹` such that `A × A⁻¹ = Identity matrix`. Only defined for square matrices with a non-zero determinant.
+- **Determinant (`np.linalg.det(A)`):** A scalar value that tells us if a matrix is invertible (non-zero determinant means invertible) and relates to how the matrix scales space. Here, `det(A) = -2`.
+
+---
+
+## Step 8 (Optional): One-Hot Encoding — Categorical to Numerical Data
+
+Machine learning algorithms work with numbers, not text. The `Department` column is categorical (text), so `pd.get_dummies()` is used to convert it into numeric binary columns — this is called **one-hot encoding**.
+
+```python
+encoded_student_marks_department = pd.get_dummies(
+    student_makes,
+    columns=["Department"],
+    dtype=int
+)
+print("\nOne-Hot Encoded Data:")
+print(encoded_student_marks_department)
+```
+
+**Output:**
+
+```
+One-Hot Encoded Data:
+    Name  Age  Maths  Department_Computer Science  Department_Data Science
+0  Sahil   20     85                            0                        1
+1  Rahul   21     78                            1                        0
+2   Aman   19     92                            0                        1
+3  priya   20     88                            1                        0
+4   Naha   22     75                            0                        1
+```
+
+**Explanation:** Each unique category in `Department` becomes its own column. A value of `1` indicates that row belongs to that category, and `0` means it doesn't. For example, Sahil (row 0) has `1` under `Department_Data Science`, confirming he belongs to Data Science and not Computer Science. This avoids assigning arbitrary numbers (like 0, 1, 2) to categories, which could mislead an ML model into thinking there's an order or ranking between them.
+
+---
+
+## Conclusion
+
+In this practical, raw dictionary data was converted into a structured pandas DataFrame, explored using `.head()`, `.dtypes`, and `.shape`, and then converted into a NumPy array to examine its shape, size, and dimensions. Core matrix operations — addition, subtraction, multiplication, dot product, transpose, inverse, and determinant — were performed using NumPy. Finally, one-hot encoding was used to convert the categorical `Department` column into a numerical format suitable for machine learning models.
+
+
 
