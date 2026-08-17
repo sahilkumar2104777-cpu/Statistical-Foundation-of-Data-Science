@@ -95,7 +95,7 @@ plt.title('Distribution of Beauty Scores')
 plt.show()
 ```
 
-![Distribution of Beauty Scores](beauty_histogram.png)
+
 
 **Comment on the distribution:** The beauty score is roughly centered around 0 (as expected, since it's a standardized panel rating), with most professors falling between -1 and +1. The distribution is **slightly right-skewed** (skewness ≈ 0.52) — there's a longer tail of higher beauty scores than lower ones, and a noticeable cluster of professors near a beauty score of 0. Overall, the shape is broadly bell-like but not perfectly symmetric, with mild bunching/gaps caused by the way the original panel scores were averaged and shifted.
 
@@ -129,17 +129,17 @@ print(tenure_pct)
 
 | Gender | % Tenured |
 |---|---|
-| Female | 74.36% |
-| Male | 80.60% |
+| Female | 57.31% |
+| Male | 66.94% |
 
 **Cross-tab (counts):**
 
 | Gender | Not Tenured | Tenured |
 |---|---|---|
-| Female | 50 | 145 |
-| Male | 52 | 216 |
+| Female | 35 | 47 |
+| Male | 39 | 79 |
 
-**Interpretation:** Yes, tenure status **does differ by gender** in this dataset. About 80.6% of male instructors are tenured/tenure-track, compared to 74.4% of female instructors — roughly a **6 percentage point gap**. This suggests male instructors in this sample were somewhat more likely to hold tenured positions than female instructors, which may reflect broader patterns of gender disparity in academic tenure during the period this data was collected.
+**Interpretation:** Yes, tenure status **does differ by gender** in this dataset. About 66.94% of male instructors are tenured/tenure-track, compared to 57.31% of female instructors — roughly a **6 percentage point gap**. This suggests male instructors in this sample were somewhat more likely to hold tenured positions than female instructors, which may reflect broader patterns of gender disparity in academic tenure during the period this data was collected.
 
 ---
 
