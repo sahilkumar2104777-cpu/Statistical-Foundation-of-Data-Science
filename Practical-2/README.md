@@ -129,15 +129,15 @@ print(tenure_pct)
 
 | Gender | % Tenured |
 |---|---|
-| Female | 57.31% |
-| Male | 66.94% |
+| Female | 74.35% |
+| Male | 80.59% |
 
 **Cross-tab (counts):**
 
 | Gender | Not Tenured | Tenured |
 |---|---|---|
-| Female | 35 | 47 |
-| Male | 39 | 79 |
+| Female | 50 | 145 |
+| Male | 52 | 216 |
 
 **Interpretation:** Yes, tenure status **does differ by gender** in this dataset. About 66.94% of male instructors are tenured/tenure-track, compared to 57.31% of female instructors — roughly a **6 percentage point gap**. This suggests male instructors in this sample were somewhat more likely to hold tenured positions than female instructors, which may reflect broader patterns of gender disparity in academic tenure during the period this data was collected.
 
