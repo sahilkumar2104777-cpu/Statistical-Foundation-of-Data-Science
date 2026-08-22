@@ -134,7 +134,4 @@ This practical demonstrates:
 - Median calculation
 - Filtering data using tenure status
 
-### Generated Files
 
-- `age_distribution.png`
-- `gender_bar_chart.png`
