@@ -1,8 +1,8 @@
 # Practical 02: Exploratory Data Analysis, Hypothesis Testing, and Chi-Square Analysis on Teaching Ratings
 
 ## Student Information
-- **Name:** Ankush Kumar Singh
-- **Registration Number:** GF202459590
+- **Name:** Sahil
+- **Registration Number:** GF202455735
 - **Subject:** Statistical Foundation of Data Science
 
 ## Objective
