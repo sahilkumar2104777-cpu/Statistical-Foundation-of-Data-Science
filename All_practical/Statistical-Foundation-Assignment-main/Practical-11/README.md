@@ -1,8 +1,8 @@
 # Practical 11: Sunspot Numbers — Gamma Model and Metropolis-Hastings MCMC[cite: 39]
 
 ## Student Information
-- **Name:** Ankush Kumar Singh
-- **Registration Number:** GF202459590
+- **Name:** Sahil
+- **Registration Number:** GF202455735
 - **Subject:** Statistical Foundation of Data Science
 
 ## Objective
