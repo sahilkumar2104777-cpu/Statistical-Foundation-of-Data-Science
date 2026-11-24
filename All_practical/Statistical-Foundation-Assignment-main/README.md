@@ -1,8 +1,8 @@
 # Statistical Foundation Assignment
 
 ## Student Information
-- **Name:** Ankush Kumar Singh
-- **Registration Number:** GF202459590
+- **Submitted By:** Sahil
+- **Registration Number:** GF202455735
 - **Subject:** Statistical Foundation of Data Science
 
 ## About This Repository
@@ -31,9 +31,3 @@ This repository contains all 12 practical assignments and lab work for the **Sta
 - Jupyter Notebook
 - Statistical Analysis
 
-## Repository Purpose
-This repository is maintained to organize, document, and submit all practical assignments completed as part of my academic coursework.
-
----
-**Submitted By:** Ankush Kumar Singh  
-**Registration No.:** GF202459590
