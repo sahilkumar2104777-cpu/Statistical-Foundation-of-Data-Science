@@ -1,8 +1,8 @@
 # Statistical Foundation Assignment
 
 ## Student Information
-- **Name:** Ankush Kumar Singh
-- **Registration Number:** GF202459590
+- **Name:** Sahil
+- **Registration Number:** GF202455735
 - **Subject:** Statistical Foundation of Data Science
 
 ## About This Repository
