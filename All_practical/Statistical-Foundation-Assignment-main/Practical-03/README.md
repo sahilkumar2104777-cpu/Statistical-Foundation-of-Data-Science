@@ -1,8 +1,8 @@
 # Practical 03: Teaching Ratings — Tenure, Age, Gender, and Evaluation Analysis
 
 ## Student Information
-- **Name:** Ankush Kumar Singh
-- **Registration Number:** GF202459590
+- **Name:** Sahil
+- **Registration Number:** GF202455735
 - **Subject:** Statistical Foundation of Data Science
 
 ## Objective
