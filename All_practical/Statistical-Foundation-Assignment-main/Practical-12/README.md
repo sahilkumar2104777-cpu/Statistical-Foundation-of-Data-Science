@@ -1,8 +1,8 @@
 # Practical 12: Metropolis Algorithm and Deterministic Logistic Growth Model
 
 ## Student Information
-- **Name:** Ankush Kumar Singh
-- **Registration Number:** GF202459590
+- **Name:** Sahil
+- **Registration Number:** GF202455735
 - **Subject:** Statistical Foundation of Data Science
 
 ## Objective[cite: 43, 45, 47, 49].
