@@ -1,8 +1,8 @@
 # Practical 01: DataFrames, NumPy Array Properties, and Matrix Operations
 
 ## Student Information
-- **Name:** Ankush Kumar Singh
-- **Registration Number:** GF202459590
+- **Name:** Sahil
+- **Registration Number:** GF202455735
 - **Subject:** Statistical Foundation of Data Science
 
 ## Objective
