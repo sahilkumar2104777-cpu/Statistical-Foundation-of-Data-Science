@@ -1,8 +1,8 @@
 # Practical 10: Principal Component Analysis (PCA) on the Wine Dataset
 
 ## Student Information
-- **Name:** Ankush Kumar Singh
-- **Registration Number:** GF202459590
+- **Name:** Sahil
+- **Registration Number:** GF202455735
 - **Subject:** Statistical Foundation of Data Science
 
 ## Objective
