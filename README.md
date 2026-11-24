@@ -35,5 +35,5 @@ This repository contains all 12 practical assignments and lab work for the **Sta
 This repository is maintained to organize, document, and submit all practical assignments completed as part of my academic coursework.
 
 ---
-**Submitted By:** Ankush Kumar Singh  
-**Registration No.:** GF202459590
+**Submitted By:** Sahil  
+**Registration No.:** GF202455735
