@@ -31,9 +31,6 @@ This repository contains all 12 practical assignments and lab work for the **Sta
 - Jupyter Notebook
 - Statistical Analysis
 
-## Repository Purpose
-This repository is maintained to organize, document, and submit all practical assignments completed as part of my academic coursework.
-
 ---
 **Submitted By:** Sahil  
 **Registration No.:** GF202455735
